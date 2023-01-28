@@ -26,11 +26,11 @@ const Projects = () => {
         }
     ]
     return (
-        <div className='mt-20'>
+        <div className='mt-36'>
             <div>
                 <h1 className='text-4xl font-semibold'>Projects</h1>
             </div>
-            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-9 xl:w-[1280px] xl:mx-auto mx-4'>
+            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-28 xl:w-[1280px] xl:mx-auto mx-4'>
                 {
                  projectInfos.map(info=><Project
                  key={info.id}

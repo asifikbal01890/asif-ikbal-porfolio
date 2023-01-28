@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Project = ({info}) => {
-    const {name, describe, liveSite, img} = info
+    const {name, describe, liveSite, img, id} = info
     return (
         <div className="card bg-secondary shadow-xl text-white">
             <figure className="h-[280px] bg-gray-200">
@@ -12,7 +12,7 @@ const Project = ({info}) => {
                 <p>{describe}</p>
                 <div className="card-actions">
                    <a href={liveSite}><button className="btn btn-accent text-white">Live Review</button></a>
-                   <a href={liveSite}><button className="btn btn-accent text-white">Details</button></a>
+                   
                 </div>
             </div>
         </div>

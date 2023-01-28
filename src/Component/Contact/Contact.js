@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
     const form = useRef();
@@ -10,16 +11,22 @@ const Contact = () => {
         emailjs.sendForm('service_3x0d3kn', 'template_tb6v0a8', form.current, 'tOHIz8wXIzHxQkrPY')
             .then((result) => {
                 console.log(result.text);
+                if (result.text) {
+                    toast.success('Sent Successfully');  
+                    e.target.reset()
+                }
+               
+               
             }, (error) => {
                 console.log(error.text);
             });
     };
     return (
-        <div className='mt-16 xl:w-[1280px] xl:mx-auto mx-4'>
+        <div className='my-36 xl:w-[1280px] xl:mx-auto mx-4'>
             <div>
                 <h2 className='text-4xl font-mono font-semibold my-6'>Contact me</h2>
             </div>
-            <form ref={form} onSubmit={sendEmail} className="lg:w-[50%] mx-auto">
+            <form ref={form} onSubmit={sendEmail} className="lg:w-[50%] mx-auto mt-16">
                 <div className='flex gap-5'>
                     <input type="text" name="user_name" placeholder='Name' className="input input-bordered input-primary w-full" />
                     <input type="email" name="user_email" placeholder='Email' className="input input-bordered input-primary w-full" />

@@ -5,10 +5,12 @@ import NavBar from './Component/NavBar/NavBar';
 import Projects from './Component/Project/Projects';
 import Footer from './Component/Footer/Footer';
 import { Element } from 'react-scroll';
-import Blog from './Component/Blog/Blog';
+import Skills from './Component/Home/Skills/Skills';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
+
   
   return (
     <div className="App">
@@ -18,12 +20,12 @@ function App() {
       <Home></Home>
       </Element>
 
-      <Element name="project">
-      <Projects></Projects>
+      <Element name="skill">
+      <Skills></Skills>
       </Element>
 
-      <Element name="blog">
-      <Blog></Blog>
+      <Element name="project">
+      <Projects></Projects>
       </Element>
 
       <Element name="contact">
@@ -31,6 +33,7 @@ function App() {
       </Element>
 
       <Footer></Footer>
+      <Toaster></Toaster>
     </div>
   );
 }

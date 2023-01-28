@@ -6,8 +6,8 @@ const NavBar = () => {
 
     const menuContent = <React.Fragment>
         <li><Link to="home" spy={true} smooth={true} duration={1000}>Home</Link></li>
+        <li><Link to="skill" spy={true} smooth={true} duration={1000}>Skills</Link></li>
         <li><Link to="project" spy={true} smooth={true} duration={1000}>Project</Link></li>
-        <li><Link to="blog" spy={true} smooth={true} duration={1000}>Blog</Link></li>
         <li><Link to="contact" spy={true} smooth={true} duration={1000}>Contact</Link></li>
     </React.Fragment>
     return (
